@@ -17,29 +17,29 @@ body {
 }
 
 .leftContainer {
-    /* position: absolute; */
+    background-color: saddlebrown;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 50px;
     padding: 50px;
     color: white;
-    border: 20px double gold;
+    border: 20px ridge gold;
     border-radius: 40px;
 }
 
 .cookieButton {
     position: absolute;
-    margin-top: 175px;
+    margin-top: 225px;
     width: 13%;
     padding: 0;
     background-color: transparent;
-    border: transparent
+    border: transparent;
+    transition: 50ms ease-in-out;
 }
 
 .cookieButton:active {
     position: absolute;
-    transition: 80ms ease-in-out;
     width: 11%;
 }
 
@@ -51,7 +51,8 @@ h1 {
 }
 
 .rightContainer {
-    border: 20px double gold;
+    background-color: saddlebrown;
+    border: 20px ridge gold;
     border-radius: 40px;
     margin: 5%;
     padding: 0 10%;
