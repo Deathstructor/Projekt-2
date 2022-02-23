@@ -9,19 +9,40 @@
     <script defer src="app.js"></script>
 </head>
 <body>
-    <h1>Hardcore Cookie Clicker</h1>
-    <div class="cookieCounter">Cookie amount: 0</div>
-    <div class="cps">CPS: 0</div>
-    <button class="cookieButton">Click me!</button>
-
-    <div class="autoclicker">
-        <h2>Autoclicker</h2>
-        <div>
-            <h3 class="acAmount">Amount: 0</h3>
-            <h3 class="acPrice">Price: 20</h3>
-        </div>
-        <p>Automatically clicks the button for you!</p>
-        <button class="buy-autoclicker">Buy</button>
+    <div class="leftContainer">        
+        <h1>Hardcore Cookie Clicker</h1>
+        <div class="cookieCounter">Cookie amount: 0</div>
+        <div class="cps" style="margin-bottom: 300px;">CPS: 0</div>
+        <button class="cookieButton">
+            <img src="/images/cookie.png" alt="Cookie" class="cookieImg" style="width: 100%;">
+        </button>
     </div>
+
+    <div class="rightContainer">
+        <div class="shopSpacing">
+            <div class="autoclicker">
+                <h2>Autoclicker</h2>
+                <div>
+                    <h3 class="acAmount">Amount: 0</h3>
+                    <h3 class="acPrice">Price: 20</h3>
+                </div>
+                <p>Automatically clicks the button for you!</p>
+                <button class="buy-autoclicker">Buy</button>
+            </div>
+        </div>
+        
+        <div class="shopSpacing">
+            <div class="grandma">
+                    <h2>Grandma</h2>
+                    <div>
+                        <h3 class="grAmount">Amount: 0</h3>
+                        <h3 class="grPrice">Price: 200</h3>
+                    </div>
+                    <p>Grandmas baking excellent cookies for you!</p>
+                    <button class="buy-grandma">Buy</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

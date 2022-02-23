@@ -1,0 +1,71 @@
+@font-face {
+    font-family: FrancoisOne;
+    src: url('fonts/FrancoisOne-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: FrancoisOne;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px 30px;
+    background-color: midnightblue;
+}
+
+.leftContainer {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    padding: 50px;
+    color: white;
+    border: 20px double gold;
+    border-radius: 40px;
+}
+
+.cookieButton {
+    position: absolute;
+    margin-top: 175px;
+    width: 13%;
+    padding: 0;
+    background-color: transparent;
+    border: transparent
+}
+
+.cookieButton:active {
+    position: absolute;
+    transition: 80ms ease-in-out;
+    width: 11%;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-family: FrancoisOne;
+    font-size: 58px;
+    color: gold;
+}
+
+.rightContainer {
+    border: 20px double gold;
+    border-radius: 40px;
+    margin: 5%;
+    padding: 0 10%;
+}
+
+.shopSpacing {
+    margin: 7% 0;
+}
+
+h2 {
+    font-size: 36px;
+    color: gold;
+}
+
+h3, p {
+    color: white;
+}
