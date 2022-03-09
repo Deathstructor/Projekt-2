@@ -18,7 +18,7 @@ let acAmount = 0, acPrice = 250
 let grAmount = 0, grPrice = 1000
 let faAmount = 0, faPrice = 5000
 let fcAmount = 0, fcPrice = 10000
-let baAmount = 0, baPrice = 25000
+let baAmount = 0, baPrice = 20000
 
 
 cookieButton.addEventListener("click", cookie)
