@@ -12,7 +12,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 20px 30px;
+    margin: 0 30px;
     background-color: midnightblue;
 }
 
@@ -70,6 +70,8 @@ h1 {
 }
 
 .rightContainer {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
     background-color: saddlebrown;
     border: 20px ridge gold;
     border-radius: 40px;
