@@ -1,7 +1,7 @@
 let cookieAmount = 0, cookieClick = 1
 let cpsAmount = 0, cps = document.querySelector(".cps")
 
-let cookieButton = document.querySelector(".cookieButton"), cookieImg = document.querySelector(".cookieImg")
+let cookieButton = document.querySelector(".cookieButton")
 let cookieCounter = document.querySelector(".cookieCounter")
 let timer = document.querySelector(".timer"), goal = document.querySelector(".goal")
 let minutes = 4, seconds = 60, cookieGoal = 5000
@@ -10,9 +10,9 @@ let buyClicks = document.querySelector(".buy-clicks"), clicksAmount = document.q
 let buyAutoclicker = document.querySelector(".buy-autoclicker"), autoclickerAmount = document.querySelector(".acAmount") , autoclickerPrice = document.querySelector(".acPrice")
 let buyGrandma = document.querySelector(".buy-grandma"), grandmaAmount = document.querySelector(".grAmount"), grandmaPrice = document.querySelector(".grPrice")
 
-let clAmount = 0, clPrice = 150
-let acAmount = 0, acPrice = 500
-let grAmount = 0, grPrice = 1500
+let clAmount = 1, clPrice = 15
+let acAmount = 0, acPrice = 100
+let grAmount = 0, grPrice = 250
 
 
 cookieButton.addEventListener("click", cookie)
@@ -25,13 +25,13 @@ function cookie() {
     cookieCounter.innerHTML = "Cookie amount: " + cookieAmount
 }
 
-setInterval(function() {
+setInterval(() => {
     cookieAmount += cpsAmount
     cookieCounter.innerHTML = "Cookie amount: " + cookieAmount
 
 
 
-    seconds -= 1
+    seconds--
     if (seconds > 9) {
         timer.innerHTML = "Time: " + minutes + ":" + seconds
     }
@@ -39,24 +39,37 @@ setInterval(function() {
         timer.innerHTML = "Time: " + minutes + ":0" + seconds
     }
 
-    if (seconds == 0) {
-        minutes -= 1
-        seconds += 60
-    }
-
-    if (minutes == 0) {
+    if (minutes <= 0 && seconds <= 0) {
         if (cookieAmount >= cookieGoal) {
             cookieAmount -= cookieGoal
-            cookieGoal *= 3
+            cookieGoal *= 2
             goal.innerHTML = "Goal: " + cookieGoal
+
+            minutes = 5
+            seconds = 1
+        } else {
+            seconds = 61
+            if (confirm("Game over!\nTry again?")) {
+                location.reload()
+            }
         }
+    }
+
+    if (seconds == 61) {
+        seconds++
+        timer.innerHTML = "Time: 0:00"
+    }
+
+    if (seconds <= 0) {
+        minutes -= 1
+        seconds += 60
     }
 }, 1000)
 
 function clicks() {
     if (cookieAmount >= Math.round(clPrice)) {
         cookieAmount -= Math.round(clPrice)
-        clPrice *= 1.35
+        clPrice *= 1.2
         cookieClick += 1
         clAmount ++
         cps.innerHTML = "CPS: " + cpsAmount
@@ -69,7 +82,7 @@ function clicks() {
 function autoclicker() {
     if (cookieAmount >= Math.round(acPrice)) {
         cookieAmount -= Math.round(acPrice)
-        acPrice *= 1.35
+        acPrice *= 1.2
         cpsAmount += 1
         acAmount ++
         cps.innerHTML = "CPS: " + cpsAmount
@@ -82,7 +95,7 @@ function autoclicker() {
 function grandma() {
     if (cookieAmount >= Math.round(grPrice)) {
         cookieAmount -= Math.round(grPrice)
-        grPrice *= 1.35
+        grPrice *= 1.2
         cpsAmount += 10
         grAmount ++
         cps.innerHTML = "CPS: " + cpsAmount

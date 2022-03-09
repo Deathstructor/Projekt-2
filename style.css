@@ -12,7 +12,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 40px 30px;
+    margin: 20px 30px;
     background-color: midnightblue;
 }
 
@@ -27,6 +27,23 @@ body {
     color: white;
     border: 20px ridge gold;
     border-radius: 40px;
+}
+
+.cookieRays {
+    position: absolute;
+    width: 25%;
+    margin-top: 60px;
+    animation: raysAnimation infinite 20s linear;
+    opacity: 60%;
+}
+
+@keyframes raysAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .cookieButton {
@@ -57,7 +74,7 @@ h1 {
     border: 20px ridge gold;
     border-radius: 40px;
     margin: 5%;
-    padding: 0 10%;
+    padding: 5% 10%;
 }
 
 .shopSpacing {
@@ -71,4 +88,25 @@ h2 {
 
 h3, p {
     color: white;
+}
+
+.rightContainer button {
+    border-color: gold;
+    margin: 1.5%;
+    line-height: 150%;
+    padding: 0 3ch;
+    text-align: center;
+    font-size: 0.9vw;
+    font-family: Ubuntu;
+    color: azure;
+    background-color: gold;
+    text-shadow: 2px 2px 2px #633d00;
+    border-radius: 1ch;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.2)
+    );
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px -3px #633d00;
 }
